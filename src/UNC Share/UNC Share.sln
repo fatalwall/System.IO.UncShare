@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNC Share", "UNC Share\UNC Share.csproj", "{837E8316-663C-4FBB-872C-7A64355A59F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNC Share Test", "UNC Share Test\UNC Share Test.csproj", "{4DB6287B-C590-4679-AF57-6D62D3ACA64E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837E8316-663C-4FBB-872C-7A64355A59F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837E8316-663C-4FBB-872C-7A64355A59F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837E8316-663C-4FBB-872C-7A64355A59F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837E8316-663C-4FBB-872C-7A64355A59F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB6287B-C590-4679-AF57-6D62D3ACA64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB6287B-C590-4679-AF57-6D62D3ACA64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB6287B-C590-4679-AF57-6D62D3ACA64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB6287B-C590-4679-AF57-6D62D3ACA64E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C9307C7-3A80-4E90-85EB-EBFDE1292534}
+	EndGlobalSection
+EndGlobal
