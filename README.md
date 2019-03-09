@@ -1,6 +1,8 @@
 # vshed.IO.UncShare
 Library for accessing UNC Shares with an alternative identity
 
+[![NuGet](https://img.shields.io/nuget/v/vshed.IO.UncShare.svg)](https://www.nuget.org/packages/vshed.IO.UncShare)
+
 ## Example Usage
             
     try
