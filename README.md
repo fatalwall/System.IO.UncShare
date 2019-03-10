@@ -9,7 +9,6 @@ Library for accessing UNC Shares with an alternative identity
     {
         using (var share = new UncShare(@"\\hostName\networkShareName", "userAccount", "password"))
         {
-            Assert.IsTrue(share.GetFiles().Length >= 1);
             if (share.GetFiles().Length >= 1)
                 Console.WriteLine("Files found");
             else
