@@ -9,12 +9,29 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace vshed.IO
 {
     public class UncShare : IDisposable
     {
         public string Path { get; private set; }
+        public DirectoryInfo GetDirectoryInfo() { return (new System.IO.DirectoryInfo(this.Path));  }
+
+        public FileInfo[] GetFiles()
+        { return GetDirectoryInfo().GetFiles(); }
+        public FileInfo[] GetFiles(string searchPattern)
+        { return GetDirectoryInfo().GetFiles(searchPattern); }
+        public FileInfo[] GetFiles(string searchPattern, SearchOption searchOption)
+        { return GetDirectoryInfo().GetFiles(searchPattern, searchOption); }
+
+        public DirectoryInfo[] GetDirectories()
+        { return GetDirectoryInfo().GetDirectories(); }
+        public DirectoryInfo[] GetDirectories(string searchPattern)
+        { return GetDirectoryInfo().GetDirectories(searchPattern); }
+        public DirectoryInfo[] GetDirectories(string searchPattern, SearchOption searchOption)
+        { return GetDirectoryInfo().GetDirectories(searchPattern, searchOption); }
+        
 
         public UncShare(string uncPath, string userName, string password)
         {

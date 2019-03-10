@@ -33,8 +33,7 @@ namespace UNC_Share_Test
             {
                 using (var share = new UncShare(@"\\nas01\BatMonTestFolder", "usrBatMonTest", "*=%$p$"))
                 {
-                    var dir = new DirectoryInfo(share.Path);
-                    Assert.IsTrue(dir.GetFiles().Length >= 1);
+                    Assert.IsTrue(share.GetFiles().Length >= 1);
                 }
             }
             catch (Exception unknown) { Assert.Fail(ExceptionFailMessage(unknown)); }
