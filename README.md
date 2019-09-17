@@ -7,7 +7,9 @@ Library for accessing UNC Shares with an alternative identity
 ```csharp            
 try
 {
-    using (var share = new UncShare(@"\\hostName\networkShareName", "userAccount", "password"))
+    using (var share = new UncShare(@"\\hostName\networkShareName"
+                                    , "userAccount"
+                                    , "password"))
     {
         if (share.GetFiles().Length >= 1)
             Console.WriteLine("Files found");
