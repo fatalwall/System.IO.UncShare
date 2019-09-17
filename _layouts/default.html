@@ -48,8 +48,9 @@
             </a>
           {% endif %}
 
-          {% capture my_include %}{% include https://vshed.us/sidebar.md %}{% endcapture %}{{ my_include | markdownify }}
-
+          <script>$("#testLoad").load("https://vshed.us/sidebar.md");</script>
+          <div id="sidebarCild"></div>
+          
           {% if site.github.is_project_page %}
             <p class="repo-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</p>
           {% endif %}
