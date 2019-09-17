@@ -3,7 +3,7 @@ Library for accessing UNC Shares with an alternative identity
 [![NuGet](https://img.shields.io/nuget/v/vshed.IO.UncShare.svg)](https://www.nuget.org/packages/vshed.IO.UncShare)
 [![GitHub release](https://img.shields.io/github/release/fatalwall/vshed.IO.UncShare.svg?label=GitHub%20release)](https://github.com/fatalwall/vshed.IO.UncShare/releases)
 
-# Example Usage
+## Example Usage
 ```csharp            
 try
 {
