@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -47,13 +48,13 @@
             </a>
           {% endif %}
         
-          <embed type="text/markdown" src="https://vshed.us/sidebar.md" />
           <div id="rootSidebar" />
           <script>
             var client = new XMLHttpRequest();
             client.open('GET', 'https://vshed.us/sidebar.md');
             client.onload = function() {
-              document.getElementById("rootSidebar").innerHTML = client.responseText;
+              var converter = new showdown.Converter(),
+              document.getElementById("rootSidebar").innerHTML = converter.makeHtml(client.responseText);
             }
             client.send();
           </script>  
