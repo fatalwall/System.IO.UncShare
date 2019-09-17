@@ -1,4 +1,5 @@
-Library for accessing UNC Shares with an alternative identity
+## Overview
+.Net library for accessing UNC Shares with an alternative identity without the need to manage mapping and unmapping. This was created to simplify picking up output files from legacy industrial equipment for data analytics.
 
 [![NuGet](https://img.shields.io/nuget/v/vshed.IO.UncShare.svg)](https://www.nuget.org/packages/vshed.IO.UncShare)
 [![GitHub release](https://img.shields.io/github/release/fatalwall/vshed.IO.UncShare.svg?label=GitHub%20release)](https://github.com/fatalwall/vshed.IO.UncShare/releases)
