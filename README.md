@@ -5,6 +5,10 @@ Library for accessing UNC Shares with an alternative identity
 
 ## Example Usage
 ```csharp            
+using vshed.IO.UncShare;
+
+...
+
 try
 {
     using (var share = new UncShare(@"\\hostName\networkShareName"
