@@ -46,8 +46,10 @@
               .tar.gz file
             </a>
           {% endif %}
-
-          <iframe src="https://vshed.us/sidebar.md"></iframe>
+        
+          <embed type="text/markdown" src="https://vshed.us/sidebar.md" />
+        
+          Spacer
           
           {% capture my_include %}<embed type="text/plain" src="https://vshed.us/sidebar.md"></embed>{% endcapture %}{{ my_include | markdownify }}
 
