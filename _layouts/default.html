@@ -49,6 +49,12 @@
         
           <embed type="text/markdown" src="https://vshed.us/sidebar.md" />
 
+var client = new XMLHttpRequest();
+client.open('GET', 'https://vshed.us/SingleCopy');
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
           
           {% capture my_include %}
           ## Programs
