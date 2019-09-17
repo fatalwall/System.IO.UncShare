@@ -48,14 +48,14 @@
           {% endif %}
         
           <embed type="text/markdown" src="https://vshed.us/sidebar.md" />
-
+<script>
 var client = new XMLHttpRequest();
 client.open('GET', 'https://vshed.us/SingleCopy');
 client.onreadystatechange = function() {
   alert(client.responseText);
 }
 client.send();
-          
+</script>  
           {% capture my_include %}
           ## Programs
  * [SingleCopy](https://vshed.us/SingleCopy) - File Deduplication
