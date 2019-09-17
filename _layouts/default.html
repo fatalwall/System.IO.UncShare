@@ -48,12 +48,12 @@
             </a>
           {% endif %}
         
-          <div id="rootSidebar" />
+          <div id="rootSidebar"></div>
           <script>
             var client = new XMLHttpRequest();
             client.open('GET', 'https://vshed.us/sidebar.md');
             client.onload = function() {
-              var converter = new showdown.Converter(),
+              var converter = new showdown.Converter();
               document.getElementById("rootSidebar").innerHTML = converter.makeHtml(client.responseText);
             }
             client.send();
