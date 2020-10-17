@@ -48,7 +48,10 @@ namespace UNC_Share_Test
             }
             catch (System.ComponentModel.Win32Exception ex)
             {
-                if (ex.Message == "The network path was not found")
+                //Win32Exception Error Codes
+                //https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d
+                //Message = "The network path was not found"
+                if (ex.NativeErrorCode == 53)
                     Assert.IsTrue(true);
                 else Assert.Fail(ExceptionFailMessage(ex));
             }
@@ -64,7 +67,11 @@ namespace UNC_Share_Test
             }
             catch (System.ComponentModel.Win32Exception ex)
             {
-                if (ex.Message == "The user name or password is incorrect")
+                //Win32Exception Error Codes
+                //https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d
+                //NativeErrorCode = 86      Message = "The specified network password is not correct"
+                //NativeErrorCode = 1326    Message = "The user name or password is incorrect"
+                if (ex.NativeErrorCode == 86 | ex.NativeErrorCode == 1326)
                     Assert.IsTrue(true);
                 else Assert.Fail(ExceptionFailMessage(ex));
             }
@@ -80,7 +87,11 @@ namespace UNC_Share_Test
             }
             catch (System.ComponentModel.Win32Exception ex)
             {
-                if (ex.Message == "The user name or password is incorrect")
+                //Win32Exception Error Codes
+                //https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d
+                //NativeErrorCode = 86      Message = "The specified network password is not correct"
+                //NativeErrorCode = 1326    Message = "The user name or password is incorrect"
+                if (ex.NativeErrorCode == 86 | ex.NativeErrorCode == 1326)
                     Assert.IsTrue(true);
                 else Assert.Fail(ExceptionFailMessage(ex));
             }

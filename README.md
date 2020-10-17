@@ -24,11 +24,15 @@ try
 }
 catch (System.ComponentModel.Win32Exception ex)
 {
-    if (ex.Message == "The network path was not found")
+    if (ex.NativeErrorCode == 53)
         Console.WriteLine("The specified UNC Path could not be found");
-    else if (ex.Message == "The user name or password is incorrect")
+    else if ((ex.NativeErrorCode == 86 | ex.NativeErrorCode == 1326)
         Console.WriteLine("The specified Username or Password is invalid");
     else
         Console.WriteLine(ex.Message);
 }
 ```
+
+## Win32Exception
+For a complete list of possible exceptions please reference Microsoft documentation. Currently located here
+https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d
