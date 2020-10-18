@@ -34,5 +34,4 @@ catch (System.ComponentModel.Win32Exception ex)
 ```
 
 ## Win32Exception
-For a complete list of possible exceptions please reference Microsoft documentation. Currently located here
-https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d
+For a complete list of possible exceptions please reference [Microsoft documentation](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d).
